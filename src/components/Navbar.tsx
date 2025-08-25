@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { colors } from "../../data/color";
+// import { colors } from "./data/color";
 export default function Navbar() {
   const [togglemenu, isToggleMenu] = useState(false);
   function toggleMenu() {
@@ -9,7 +9,7 @@ export default function Navbar() {
     <div className="flex items-center justify-center">
       <nav
         className=" transform w-3/4 text-white shadow-md rounded-md"
-        style={{ backgroundColor: colors.darkGray }}
+        // style={{ backgroundColor: colors.darkGray }}
       >
         {" "}
         <div className="flex justify-between items-center p-2 sm:p-4 ">
