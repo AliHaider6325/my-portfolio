@@ -12,6 +12,17 @@ interface props {
 function Navigate(link: string) {
   window.open(link, "_blank");
 }
+function renderDesc(desc: string) {
+  return desc
+    .split(/(\*\*.*?\*\*)/g)
+    .map((part, i) =>
+      part.startsWith("**") && part.endsWith("**") ? (
+        <strong key={i}>{part.replace(/\*\*/g, "")}</strong>
+      ) : (
+        part
+      )
+    );
+}
 const Projects = ({
   imgUrl,
   lang,
@@ -44,8 +55,8 @@ const Projects = ({
         </h3>
 
         <h1 className="font-bold text-xl mt-2">{title}</h1>
-        <p className="text-gray-700">{desc}</p>
-        <div className="flex justify-center items-center mt-2">
+        <p className="text-gray-700">{renderDesc(desc)}</p>
+        <div className="flex justify-center items-center mt-2 mb-3">
           <button
             onClick={() => Navigate(link)}
             className="w-2/3 p-2 text-white font-bold flex items-center justify-center rounded-md"

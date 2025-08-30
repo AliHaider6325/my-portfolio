@@ -1,3 +1,4 @@
+import { AiOutlineDownload } from "react-icons/ai";
 import { FcVoicePresentation } from "react-icons/fc";
 const MyDetails = () => {
   return (
@@ -10,9 +11,10 @@ const MyDetails = () => {
         world a better place one line of code at a time.
       </p>
       <a href="/Ali'sCv.pdf" download={"Ali's Cv"}>
-        <button className="flex items-center justify-center p-4 bg-[#E5F4E3] text-black font-bold rounded-2xl mt-3 cursor-pointer w-full">
-          <FcVoicePresentation />
-          Get Resume
+        <button className="flex items-center justify-center p-4 bg-[#E5F4E3] text-black font-bold rounded-2xl mt-3 cursor-pointer w-full overflow-hidden relative group">
+          <FcVoicePresentation className="mr-2 text-2xl" />
+          <span className="relative z-10">Get Resume</span>
+          <AiOutlineDownload className="absolute right-4 opacity-0 transform translate-x-4 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100" />
         </button>
       </a>
     </div>

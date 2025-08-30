@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <div className="flex items-center justify-center">
       <nav
-        className=" transform w-3/4 text-white shadow-md rounded-md"
+        className=" transform w-3/4 text-white shadow-md rounded-md bg-[#1B1B1B]"
         // style={{ backgroundColor: colors.darkGray }}
       >
         {" "}
