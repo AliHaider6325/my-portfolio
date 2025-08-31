@@ -35,12 +35,16 @@ const Projects = ({
 }: props) => {
   return (
     <div
-      className={`bg-white text-black mx-1 my-2 flex flex-col md:flex ${
+      className={`bg-white dark:bg-[#1B1B1B] dark:text-gray-200 text-black mx-1 my-2 flex flex-col md:flex ${
         reverse ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >
       <div>
-        <img src={imgUrl} className="mt-4 mb-4 h-48 lg:h-64"></img>
+        <img
+          src={imgUrl}
+          alt="projects"
+          className="mt-4 mb-4 h-48 lg:h-64 "
+        ></img>
       </div>
       <div
         className={`md:w-1/2 lg:flex lg:flex-col lg:justify-center ${
@@ -55,7 +59,7 @@ const Projects = ({
         </h3>
 
         <h1 className="font-bold text-xl mt-2">{title}</h1>
-        <p className="text-gray-700">{renderDesc(desc)}</p>
+        <p className="text-gray-700 dark:text-gray-200">{renderDesc(desc)}</p>
         <div className="flex justify-center items-center mt-2 mb-3">
           <button
             onClick={() => Navigate(link)}

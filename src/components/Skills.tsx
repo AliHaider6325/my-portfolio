@@ -6,7 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Skills = () => {
   // state to keep track of selected category
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+    SKILLSARRAY[0].category
+  );
   const skillsRef = useRef<HTMLDivElement | null>(null);
 
   const handleClick = (category: string) => {

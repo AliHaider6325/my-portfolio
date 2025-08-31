@@ -1,46 +1,58 @@
+import DarkMode from "./components/DarkModeDropdown";
+import ExtraProject from "./components/ExtraProject";
 import Footer from "./components/Footer";
 import MyDetails from "./components/MyDetails";
 import MyImage from "./components/MyImage";
 import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import SkillsSec from "./components/SkillsSec";
 import WorkExperience from "./components/WorkExperience";
-import { projectData } from "./data/project";
+import Contact from "./components/Contact";
+import { useScrollRefs } from "./hooks/useScrollRefs";
 const App = () => {
+  const {
+    homeRef,
+    projectsRef,
+    skillsRef,
+    experienceRef,
+    contactRef,
+    scrollToSection,
+  } = useScrollRefs();
   return (
     <div className=" bg-black min-h-screen text-white fadeIn">
-      <Navbar />
-      <div className="md:flex lg:flex lg:flex-row-reverse lg:items-center lg:justify-between">
-        <MyImage />
-        <MyDetails />
-      </div>
-      <div className="bg-white">
-        <SkillsSec />
-        <div className="mb-10">
-          {projectData.imgUrl.map((_, i) => {
-            return (
-              <div key={i}>
-                <Projects
-                  imgUrl={projectData.imgUrl[i]}
-                  lang={projectData.lang[i]}
-                  title={projectData.title[i]}
-                  desc={projectData.desc[i]}
-                  btnText={projectData.btnText}
-                  color={projectData.color[i]}
-                  reverse={i === 1 ? true : false}
-                  link={projectData.link[i]}
-                />
-              </div>
-            );
-          })}
+      <Navbar
+        onHomeClick={() => scrollToSection(homeRef)}
+        onProjectsClick={() => scrollToSection(projectsRef)}
+        onSkillsClick={() => scrollToSection(skillsRef)}
+        onExperienceClick={() => scrollToSection(experienceRef)}
+        onContactClick={() => scrollToSection(contactRef)}
+      />
+      <section ref={homeRef}>
+        <DarkMode />
+        <div className="md:flex lg:flex lg:flex-row-reverse lg:items-center lg:justify-between">
+          <MyImage />
+          <MyDetails />
         </div>
-      </div>
-      <Skills />
-      <div className="bg-white text-white flex justify-center items-center">
-        <WorkExperience />
-        {/* <Contact /> */}
-      </div>
+      </section>
+      <section ref={projectsRef}>
+        <div className="bg-white dark:bg-[#1B1B1B] dark:text-gray-200">
+          <SkillsSec />
+          <ExtraProject></ExtraProject>
+        </div>
+      </section>
+      <section ref={skillsRef}>
+        <Skills />
+      </section>
+      <section ref={experienceRef}>
+        <div className="bg-white dark:bg-[#1B1B1B] text-white flex justify-center items-center">
+          <WorkExperience />
+        </div>
+      </section>
+      <section ref={contactRef}>
+        <div className="bg-black">
+          <Contact />
+        </div>
+      </section>
       <div className="bg-white text-black">
         <Footer />
       </div>

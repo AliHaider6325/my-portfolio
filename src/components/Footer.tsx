@@ -3,7 +3,7 @@ import { BsWhatsapp } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-white text-black mt-20">
+    <footer className="relative bg-white text-black mt-20 dark:bg-[#1B1B1B] dark:text-gray-200">
       {/* Wavy Top */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg
@@ -43,6 +43,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img
+                alt="gmail icon"
                 src="gmail.svg"
                 fetchPriority="low"
                 className="h-6 w-6 hover:opacity-80"

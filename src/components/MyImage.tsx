@@ -5,6 +5,7 @@ const MyImage = () => {
         src="Me.webp"
         className="float w-52 h-52 rounded-full object-cover sm:w-72 sm:h-72 lg:w-96 lg:h-96"
         fetchPriority="high"
+        alt="me"
       ></img>
     </div>
   );

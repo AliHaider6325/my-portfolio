@@ -5,9 +5,11 @@ import WorkExp from "./WorkExp";
 const WorkExperience = () => {
   return (
     <div>
-      <div className="flex justify-center items-center flex-col">
-        <div className="font-bold text-2xl text-black my-5">Experience</div>
-        <p className="text-gray-700 mx-2">
+      <div className="dark:text-gray-200 dark:bg-[#1B1B1B] flex justify-center items-center flex-col">
+        <div className="font-bold text-2xl dark:text-gray-200 text-black my-5">
+          Experience
+        </div>
+        <p className="text-gray-700 dark:text-gray-200 mx-2">
           BS Computer Science student with market experience in software
           development, focused on creating efficient and innovative solutions.
         </p>
@@ -25,9 +27,6 @@ const WorkExperience = () => {
           exp={CASESTUDY.exp[1]}
           cardIndex={CASESTUDY.cardIndex[1]}
         />
-      </div>
-      <div className="bg-black">
-        <Contact />
       </div>
     </div>
   );

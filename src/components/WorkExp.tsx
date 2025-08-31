@@ -13,7 +13,7 @@ const WorkExp = ({ img, name, exp, cardIndex }: props) => {
     setKnowMore(!knowMoreState);
   }
   return (
-    <div className="flex justify-center items-center flex-col text-black md:w-1/2">
+    <div className="flex justify-center items-center flex-col text-black dark:text-gray-200 dark:bg-[#1B1B1B] md:w-1/2">
       <div className="mt-10">
         <img className=" h-60 w-100" src={img}></img>
       </div>
