@@ -7,7 +7,7 @@ export const useScrollRefs=()=>{
     const experienceRef = useRef<HTMLElement >(null!);
     const contactRef = useRef<HTMLElement >(null!);
 
-    const scrollToSection=<T extends Element>(ref:React.RefObject<HTMLElement>)=>{
+    const scrollToSection=(ref:React.RefObject<HTMLElement>)=>{
         ref.current?.scrollIntoView({ behavior : "smooth",block:"start"});
     }
 

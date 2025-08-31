@@ -1,5 +1,4 @@
 import { CASESTUDY } from "../data/project";
-import Contact from "./Contact";
 import WorkExp from "./WorkExp";
 
 const WorkExperience = () => {
