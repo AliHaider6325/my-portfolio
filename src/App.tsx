@@ -1,15 +1,19 @@
+import { lazy, Suspense } from "react";
 import DarkMode from "./components/DarkModeDropdown";
-import ExtraProject from "./components/ExtraProject";
-import Footer from "./components/Footer";
 import MyDetails from "./components/MyDetails";
 import MyImage from "./components/MyImage";
 import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
-import SkillsSec from "./components/SkillsSec";
-import WorkExperience from "./components/WorkExperience";
-import Contact from "./components/Contact";
 import { useScrollRefs } from "./hooks/useScrollRefs";
 import LazyLoad from "./components/lazyload";
+
+// Lazy imports (code-splitting)
+const ExtraProject = lazy(() => import("./components/ExtraProject"));
+const Footer = lazy(() => import("./components/Footer"));
+const Skills = lazy(() => import("./components/Skills"));
+const SkillsSec = lazy(() => import("./components/SkillsSec"));
+const WorkExperience = lazy(() => import("./components/WorkExperience"));
+const Contact = lazy(() => import("./components/Contact"));
+
 const App = () => {
   const {
     homeRef,
@@ -19,8 +23,9 @@ const App = () => {
     contactRef,
     scrollToSection,
   } = useScrollRefs();
+
   return (
-    <div className=" bg-black min-h-screen text-white fadeIn">
+    <div className="bg-black min-h-screen text-white fadeIn">
       <Navbar
         onHomeClick={() => scrollToSection(homeRef)}
         onProjectsClick={() => scrollToSection(projectsRef)}
@@ -28,6 +33,7 @@ const App = () => {
         onExperienceClick={() => scrollToSection(experienceRef)}
         onContactClick={() => scrollToSection(contactRef)}
       />
+
       <section ref={homeRef}>
         <DarkMode />
         <div className="md:flex lg:flex lg:flex-row-reverse lg:items-center lg:justify-between">
@@ -35,36 +41,51 @@ const App = () => {
           <MyDetails />
         </div>
       </section>
+
       <section ref={projectsRef}>
         <div className="bg-white dark:bg-[#1B1B1B] dark:text-gray-200">
           <LazyLoad>
-            <SkillsSec />
-            <ExtraProject></ExtraProject>
+            <Suspense fallback={<div>Loading...</div>}>
+              <SkillsSec />
+              <ExtraProject />
+            </Suspense>
           </LazyLoad>
         </div>
       </section>
+
       <section ref={skillsRef}>
         <LazyLoad>
-          <Skills />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Skills />
+          </Suspense>
         </LazyLoad>
       </section>
+
       <section ref={experienceRef}>
         <div className="bg-white dark:bg-[#1B1B1B] text-white flex justify-center items-center">
           <LazyLoad>
-            <WorkExperience />
+            <Suspense fallback={<div>Loading...</div>}>
+              <WorkExperience />
+            </Suspense>
           </LazyLoad>
         </div>
       </section>
+
       <section ref={contactRef}>
         <div className="bg-black">
           <LazyLoad>
-            <Contact />
+            <Suspense fallback={<div>Loading...</div>}>
+              <Contact />
+            </Suspense>
           </LazyLoad>
         </div>
       </section>
+
       <div className="bg-white text-black">
         <LazyLoad>
-          <Footer />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Footer />
+          </Suspense>
         </LazyLoad>
       </div>
     </div>
