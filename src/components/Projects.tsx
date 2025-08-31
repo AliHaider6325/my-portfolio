@@ -43,7 +43,9 @@ const Projects = ({
         <img
           src={imgUrl}
           alt="projects"
-          className="mt-4 mb-4 h-48 lg:h-64 "
+          width={800}
+          height={600}
+          className="mt-4 mb-4 h-48 lg:h-64 w-auto"
         ></img>
       </div>
       <div
