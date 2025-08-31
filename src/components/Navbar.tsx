@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { colors } from "./data/color";
 export default function Navbar() {
   const [togglemenu, isToggleMenu] = useState(false);
   function toggleMenu() {
@@ -7,10 +6,7 @@ export default function Navbar() {
   }
   return (
     <div className="flex items-center justify-center">
-      <nav
-        className=" transform w-3/4 text-white shadow-md rounded-md bg-[#1B1B1B]"
-        // style={{ backgroundColor: colors.darkGray }}
-      >
+      <nav className=" transform w-3/4 text-white shadow-md rounded-md bg-[#1B1B1B]">
         {" "}
         <div className="flex justify-between items-center p-2 sm:p-4 ">
           {" "}
@@ -70,9 +66,8 @@ export default function Navbar() {
               href="https://www.linkedin.com/in/muhammad-ali-9b32252b7/"
               className="hover:text-blue-400"
             >
-              {" "}
               <img
-                src="linkedin.png"
+                src="linkedin.svg"
                 className="w-5 h-5 sm:w-7 sm:h-7 md:w-7 md:h-7"
               ></img>{" "}
             </a>{" "}
@@ -82,7 +77,7 @@ export default function Navbar() {
             >
               {" "}
               <img
-                src="github.png"
+                src="/Tools/github.svg"
                 className="w-5 h-5 sm:w-7 sm:h-7 md:w-7 md:h-7"
               ></img>{" "}
             </a>{" "}
@@ -92,7 +87,7 @@ export default function Navbar() {
             >
               {" "}
               <img
-                src="leetcode.png"
+                src="leetcode.svg"
                 className="w-5 h-5 sm:w-7 sm:h-7 md:w-7 md:h-7"
               ></img>{" "}
             </a>{" "}

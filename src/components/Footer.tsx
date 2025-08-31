@@ -1,5 +1,4 @@
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { SiGmail } from "react-icons/si";
 import { BsWhatsapp } from "react-icons/bs";
 
 const Footer = () => {
@@ -43,7 +42,11 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="gmail.svg" className="h-6 w-6 hover:opacity-80" />
+              <img
+                src="gmail.svg"
+                fetchPriority="low"
+                className="h-6 w-6 hover:opacity-80"
+              />
             </a>
           </div>
         </div>

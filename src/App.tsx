@@ -1,4 +1,3 @@
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import MyDetails from "./components/MyDetails";
 import MyImage from "./components/MyImage";
@@ -29,7 +28,7 @@ const App = () => {
                   desc={projectData.desc[i]}
                   btnText={projectData.btnText}
                   color={projectData.color[i]}
-                  reverse={false}
+                  reverse={i === 1 ? true : false}
                   link={projectData.link[i]}
                 />
               </div>
@@ -37,10 +36,7 @@ const App = () => {
           })}
         </div>
       </div>
-      {/* <div className="mb-10"> */}
       <Skills />
-      {/* </div> */}
-      {/* <Footer /> */}
       <div className="bg-white text-white flex justify-center items-center">
         <WorkExperience />
         {/* <Contact /> */}

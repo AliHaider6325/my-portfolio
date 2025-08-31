@@ -1,7 +1,6 @@
-import { div } from "framer-motion/client";
 import { useState } from "react";
 import { BiChevronRight } from "react-icons/bi";
-import { CASESTUDY, WORKING } from "../data/project";
+import { WORKING } from "../data/project";
 interface props {
   img: string;
   name: string;

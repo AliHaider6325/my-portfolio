@@ -1,5 +1,5 @@
 export const projectData = {
-  imgUrl: ["food.PNG","Project1.PNG","Project3.PNG"],
+  imgUrl: ["food.webp","Project1.webp","Project3.webp"],
   lang: ["Next.js","React.js","Next.js"],
   title: ["Restaurant Food Ordering App","Clone-Nike","Orchard Homestay"],
   desc: ["Full-stack food ordering app built with **Next.js 13, Prisma, PostgreSQL, Auth.js, and Stripe.** Features include dynamic menus, shopping cart, authentication, secure checkout, and Dockerized deployment.","A sleek, responsive Nike website clone showcasing premium athletic wear, footwear, and accessories with a modern, user-friendly design.","A fully responsive website for Orchard Homestay, showcasing cozy accommodations, scenic orchard views, traditional Kashmiri meals, and nearby attractions. Features include booking form, gallery, and seamless navigation."],
@@ -48,7 +48,7 @@ export const SKILLSARRAY = [
     skills: [
       { name: "Git", img: "/Tools/git.svg" },
       { name: "GitHub", img: "/Tools/github.svg" },
-      { name: "Linux", img: "/Tools/linux.svg" },
+      { name: "Linux", img: "/Tools/linux.webp" },
       { name: "Postman", img: "/Tools/postman.svg" },
       { name: "Vercel", img: "/Tools/vercel.svg" },
       { name: "Figma", img: "/Tools/figma.svg" },
@@ -68,7 +68,7 @@ export const SKILLSARRAY = [
 
 
 export const CASESTUDY ={
-  img:["cs11.jpg","cs1.jpg"],
+  img:["cs11.webp","cs1.webp"],
   name:["Triomatic Solutions","FreeLancing"],
   exp:["Worked as a Frontend developer to enhance the performance, responsiveness, and usability of a client’s web application, focusing on the frontend experience.","Delivered multiple freelance projects, including web apps, mobile apps, and academic/degree-related tasks, focusing on efficient, user-friendly, and modern solutions."],
   cardIndex:[0,1]
