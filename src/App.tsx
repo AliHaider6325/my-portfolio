@@ -4,7 +4,7 @@ import MyDetails from "./components/MyDetails";
 import MyImage from "./components/MyImage";
 import Navbar from "./components/Navbar";
 import { useScrollRefs } from "./hooks/useScrollRefs";
-import LazyLoad from "./components/lazyload";
+import LazyLoad from "./components/LazyLoad";
 
 // Lazy imports (code-splitting)
 const ExtraProject = lazy(() => import("./components/ExtraProject"));
