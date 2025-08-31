@@ -9,6 +9,7 @@ import SkillsSec from "./components/SkillsSec";
 import WorkExperience from "./components/WorkExperience";
 import Contact from "./components/Contact";
 import { useScrollRefs } from "./hooks/useScrollRefs";
+import LazyLoad from "./components/lazyload";
 const App = () => {
   const {
     homeRef,
@@ -36,25 +37,35 @@ const App = () => {
       </section>
       <section ref={projectsRef}>
         <div className="bg-white dark:bg-[#1B1B1B] dark:text-gray-200">
-          <SkillsSec />
-          <ExtraProject></ExtraProject>
+          <LazyLoad>
+            <SkillsSec />
+            <ExtraProject></ExtraProject>
+          </LazyLoad>
         </div>
       </section>
       <section ref={skillsRef}>
-        <Skills />
+        <LazyLoad>
+          <Skills />
+        </LazyLoad>
       </section>
       <section ref={experienceRef}>
         <div className="bg-white dark:bg-[#1B1B1B] text-white flex justify-center items-center">
-          <WorkExperience />
+          <LazyLoad>
+            <WorkExperience />
+          </LazyLoad>
         </div>
       </section>
       <section ref={contactRef}>
         <div className="bg-black">
-          <Contact />
+          <LazyLoad>
+            <Contact />
+          </LazyLoad>
         </div>
       </section>
       <div className="bg-white text-black">
-        <Footer />
+        <LazyLoad>
+          <Footer />
+        </LazyLoad>
       </div>
     </div>
   );
