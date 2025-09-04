@@ -11,7 +11,7 @@ const ExtraProject = () => {
             lang={projectData.lang[i]}
             title={projectData.title[i]}
             desc={projectData.desc[i]}
-            btnText={projectData.btnText}
+            btnText={projectData.btnText[i]}
             color={projectData.color[i]}
             reverse={i === 1 ? true : false}
             link={projectData.link[i]}

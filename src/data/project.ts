@@ -1,11 +1,11 @@
 export const projectData = {
   imgUrl: ["food.webp","Project1.webp","Project3.webp"],
-  lang: ["Next.js","React.js","Next.js"],
-  title: ["Restaurant Food Ordering App","Clone-Nike","Orchard Homestay"],
-  desc: ["Full-stack food ordering app built with **Next.js 13, Prisma, PostgreSQL, Auth.js, and Stripe.** Features include dynamic menus, shopping cart, authentication, secure checkout, and Dockerized deployment.","A sleek, responsive Nike website clone showcasing premium athletic wear, footwear, and accessories with a modern, user-friendly design.","A fully responsive website for Orchard Homestay, showcasing cozy accommodations, scenic orchard views, traditional Kashmiri meals, and nearby attractions. Features include booking form, gallery, and seamless navigation."],
-  btnText: "View Project",
+  lang: ["Next.js","React.js","React.js"],
+  title: ["Restaurant Food Ordering App","Clone-Nike","AI-Powered LeetCode Explainer Chrome Extension"],
+  desc: ["Full-stack food ordering app built with **Next.js 13, Prisma, PostgreSQL, Auth.js, and Stripe.** Features include dynamic menus, shopping cart, authentication, secure checkout, and Dockerized deployment.","A sleek, responsive Nike website clone showcasing premium athletic wear, footwear, and accessories with a modern, user-friendly design.","An intelligent Chrome extension that serves as a personal coding tutor for LeetCode users.It provides on-demand problem explanations, strategic hints, and optimal solutions. The tool also analyzes user-submitted code to deliver detailed time and space complexity analysis and actionable improvement recommendations."],
+  btnText: ["View Project","View Project","Tutorial on youtube"],
   color:["#FFA217","#000AFF","#2AB090"],
-  link:["http://food-delivery-app-ivory-psi.vercel.app","http://food-delivery-app-ivory-psi.vercel.app","https://orchard-homestay.vercel.app/"]
+  link:["http://food-delivery-app-ivory-psi.vercel.app","http://food-delivery-app-ivory-psi.vercel.app","https://www.youtube.com/watch?v=CbAHyLPW024"]
 };
 
 
