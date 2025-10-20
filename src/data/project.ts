@@ -1,11 +1,11 @@
 export const projectData = {
   imgUrl: ["food.webp","Project1.webp","Project3.webp"],
-  lang: ["Next.js","React.js","React.js"],
-  title: ["Restaurant Food Ordering App","Clone-Nike","AI-Powered LeetCode Explainer Chrome Extension"],
-  desc: ["Full-stack food ordering app built with **Next.js 13, Prisma, PostgreSQL, Auth.js, and Stripe.** Features include dynamic menus, shopping cart, authentication, secure checkout, and Dockerized deployment.","A sleek, responsive Nike website clone showcasing premium athletic wear, footwear, and accessories with a modern, user-friendly design.","An intelligent Chrome extension that serves as a personal coding tutor for LeetCode users.It provides on-demand problem explanations, strategic hints, and optimal solutions. The tool also analyzes user-submitted code to deliver detailed time and space complexity analysis and actionable improvement recommendations."],
+  lang: ["Next.js","MERN","React.js"],
+  title: ["Restaurant Food Ordering App","IM Surgical(Client project)","AI-Powered LeetCode Explainer Chrome Extension"],
+  desc: ["Full-stack food ordering app built with **Next.js 13, Prisma, PostgreSQL, Auth.js, and Stripe.** Features include dynamic menus, shopping cart, authentication, secure checkout, and Dockerized deployment.","I M Surgical – A client project (80% complete) built with the MERN stack. It’s a modern eCommerce platform for surgical and medical equipment featuring secure checkout, user authentication, admin controls, and a fully responsive React interface.","An intelligent Chrome extension that serves as a personal coding tutor for LeetCode users.It provides on-demand problem explanations, strategic hints, and optimal solutions. The tool also analyzes user-submitted code to deliver detailed time and space complexity analysis and actionable improvement recommendations."],
   btnText: ["View Project","View Project","Tutorial on youtube"],
   color:["#FFA217","#000AFF","#2AB090"],
-  link:["http://food-delivery-app-ivory-psi.vercel.app","http://food-delivery-app-ivory-psi.vercel.app","https://www.youtube.com/watch?v=CbAHyLPW024"]
+  link:["http://food-delivery-app-ivory-psi.vercel.app","https://imsurgical-client-iaae.vercel.app/","https://www.youtube.com/watch?v=CbAHyLPW024"]
 };
 
 
