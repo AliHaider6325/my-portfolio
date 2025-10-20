@@ -8,7 +8,6 @@ export const projectData = {
   link:["http://food-delivery-app-ivory-psi.vercel.app","https://imsurgical-client-iaae.vercel.app/","https://www.youtube.com/watch?v=CbAHyLPW024"]
 };
 
-
 export const SKILLSARRAY = [
   {
     category: "Frontend",
